@@ -1,7 +1,7 @@
 
 import { Route, Routes } from "react-router-dom"
 import { Banner } from "./components/Banner/Banner"
-import { Header } from "./components/Header/header"
+import { Header } from "./components/Header/Header"
 import { HomePage } from "./pages/HomePage/HomePage"
 import { CatalogPage } from "./pages/CatalogPage/CatalogPage"
 
