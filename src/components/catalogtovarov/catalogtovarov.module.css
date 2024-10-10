@@ -1,0 +1,21 @@
+.catalog{
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.catalogs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Zagolovktov{
+    font-size: 40px;
+    margin-left: 260px;
+}
+
+.catalogszag{
+    margin-top: 120px;
+}
