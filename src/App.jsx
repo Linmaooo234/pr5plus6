@@ -6,6 +6,8 @@ import { HomePage } from "./pages/HomePage/HomePage"
 import { CatalogPage } from "./pages/CatalogPage/CatalogPage"
 import { OneProductPage } from "./pages/ProductPage/ProductPage"
 import { Userss } from "./pages/Userpage/Userpage"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
