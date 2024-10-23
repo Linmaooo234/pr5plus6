@@ -1,5 +1,7 @@
+import { PoiskTovarov } from '../Poisk/Poisk';
 import { Tovar } from '../tovar/tovar'
 import s from './catalogtovarov.module.css'
+import React, { useState } from 'react';
 
 const products = [
     {
@@ -45,20 +47,32 @@ const products = [
 
 
 export function Catalogtovarov(){
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+    const filteredProducts = products.filter(product =>
+        product.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     return(
         <div className={s.catalogszag}>
              <h1 className={s.Zagolovktov}>Каталог товаров</h1>
+             <div className={s.Poiskp}>
+        <PoiskTovarov handleChange={handleChange} />
+        </div>
         <div className={s.catalogs}>
             <div className={s.catalog}>
-            {products.map((product) => (
-                <Tovar 
-                    key={product.id}
-                    id={product.id}
-                    title={product.title} 
-                    price={product.price} 
-                    image={product.image} 
-                />
-            ))}
+                    {filteredProducts.map((product) => (
+                        <Tovar 
+                            key={product.id}
+                            id={product.id}
+                            title={product.title} 
+                            price={product.price} 
+                            image={product.image} 
+                        />
+                    ))}
             </div>
             
         </div>
