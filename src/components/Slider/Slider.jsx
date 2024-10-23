@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import s from './slider.module.css';
+import s from './Slider.module.css';
 
 export default function SimpleSlider() {
   const settings = {
