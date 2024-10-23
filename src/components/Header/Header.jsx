@@ -12,6 +12,7 @@ export function Header(){
                     <nav className={s.nav}>
                         <NavLink to="/">О нас</NavLink>
                         <NavLink to="/catalog">Каталог</NavLink>
+                        <NavLink to="/user">Пользователи</NavLink>
                         <>Где нас найти</>
                     </nav>
                     <img src={logo} className={s.logo}></img>
