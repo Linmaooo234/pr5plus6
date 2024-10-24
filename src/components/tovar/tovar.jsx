@@ -3,7 +3,7 @@ import s from './tovar.module.css';
 import tovarkart from '../../assets/tovar.png';
 import { Link } from 'react-router-dom';
 
-export function Tovar({ title, price, image, id }) {
+export function Tovar({ title, price, image, id, quantity }) {
     return (
         <div className={s.Tovars}>
             <img src={image} className={s.imagecart}></img>
@@ -13,6 +13,7 @@ export function Tovar({ title, price, image, id }) {
             <button className={s.button}><Link to={`/tovar/${id}`} className='Textik'>
                     Смотреть товар
                 </Link></button>
+                <p className={s.quantity}>Кол-во:{quantity}</p>
             </div>
         </div>
     );
